@@ -1,12 +1,29 @@
 import React from 'react';
+import { LuFlower2 } from 'react-icons/lu';
+import { NavLink } from 'react-router';
 
 const Navbar = () => {
 
     const link =( <>
     
-        <li><a>Item 3</a></li>
-        <li><a>Item 3</a></li>
+        {/* <li><a>Home</a></li>
+        <li><a>Services</a></li>
+        <li><a>About</a></li>
+        <li><a>Contact</a></li> */}
     
+        <li>
+            <NavLink to='/'>Home</NavLink>
+        </li>
+        <li>
+            <NavLink to='/services'>Services</NavLink>
+        </li>
+        <li>
+            <NavLink to='/about'>About</NavLink>
+        </li>
+        <li>
+            <NavLink to='/contact'>Contact</NavLink>
+        </li>
+
     </>
     )
 
@@ -25,10 +42,11 @@ const Navbar = () => {
        }
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <a className="btn font-bold btn-ghost text-2xl"> <logo className='bg-gradient-to-r from-pink-300 to-purple-300 p-2 rounded-2xl'><LuFlower2 /></logo> Style <span className='text-pink-300'>Decor</span></a>
+
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
+    <ul className="menu menu-horizontal text-xl font-semibold px-1">
       
        {
         link
@@ -36,7 +54,7 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    <a className="btn">Get Start</a>
   </div>
 </div>
     );

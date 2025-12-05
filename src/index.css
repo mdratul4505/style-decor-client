@@ -6,3 +6,8 @@
 body{
   font-family: "Poppins", sans-serif;
 }
+
+.menu a.active{
+    text-decoration: underline;
+    color: rgb(196, 50, 196);
+}
