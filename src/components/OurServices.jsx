@@ -23,7 +23,7 @@ const OurServices = () => {
         </button>
         <h2 className="text-5xl flex items-center justify-center my-5 taitle font-bold ">
           Popular{" "}
-          <span className="text-pink-400">
+          <span className="text-pink-400 mx-3">
             <Typewriter
               options={{
                 strings: ["Decoration"],

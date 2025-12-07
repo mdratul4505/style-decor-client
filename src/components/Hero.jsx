@@ -111,7 +111,7 @@ const Hero = () => {
             }}
             whileHover={{
               scale: 1.05,
-              boxShadow: "0px 0px 25px rgba(252, 124, 171, 0.8)", // pink glow
+              boxShadow: "0px 0px 25px rgba(252, 124, 171, 0.8)", 
             }}
             className="absolute -bottom-5 left-5 z-20 bg-white  shadow-xl px-4 py-2 rounded-full flex items-center gap-2"
           >
