@@ -11,7 +11,7 @@ const Hero = () => {
 
   return (
     <div className=" py-20 bg-gradient-to-br from-[#fff7f3] via-[#fffdfb] to-[#f3f6ff]">
-      <div className="grid width lg:grid-cols-2 gap-10 items-center w-full">
+      <div className="grid gap-10  lg:grid-cols-2 container mx-auto">
         {/* LEFT SECTION */}
         <div data-aos="fade-right">
           {/* Badge */}
@@ -36,7 +36,7 @@ const Hero = () => {
           </motion.div>
 
           {/* Heading */}
-          <h1 className="text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900">
+          <h1 className="text-5xl taitle lg:text-6xl font-extrabold leading-tight text-gray-900">
             Transform Your <br />
             <span className="text-pink-500">Space</span>
             <span className="ml-2">Into</span>
@@ -138,7 +138,7 @@ const Hero = () => {
                 }}
                 transition={{ duration: 0.1 }}
               />
-              =
+              
               <motion.img
                 data-aos="fade-up"
                 src="https://i.ibb.co.com/k2DntGzn/59096e0f4a73d0cc1152fbc61bbe1caf.jpg"
@@ -187,22 +187,4 @@ const Hero = () => {
 
 export default Hero;
 
-{
-  /* <motion.div
-                initial={{ scale: 0.8 }}
-                whileInView={{ scale: 1 }}
-                transition={{ duration: 0.8 }}
-                className="flex justify-center lg:w-2/5"
-            >
-                <motion.img
-                    src={banner}
-                    alt="Tumit Hasan"
-                    className="rounded-full w-64 h-64 md:w-96 md:h-96 md:pt- object-cover border-4 border-lime-500 object-top"
-                    whileHover={{
-                        scale: 1.05,
-                        boxShadow: "0px 0px 25px #84cc16",
-                    }}
-                    transition={{ duration: 0.3 }}
-                />
-            </motion.div> */
-}
+

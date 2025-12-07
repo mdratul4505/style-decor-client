@@ -4,7 +4,7 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-body{
+.taitle{
   font-family: "Cormorant Garamond", serif;
 }
 

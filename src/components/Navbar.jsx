@@ -5,11 +5,7 @@ import { NavLink } from 'react-router';
 const Navbar = () => {
 
     const link =( <>
-    
-        {/* <li><a>Home</a></li>
-        <li><a>Services</a></li>
-        <li><a>About</a></li>
-        <li><a>Contact</a></li> */}
+
     
         <li>
             <NavLink to='/'>Home</NavLink>
