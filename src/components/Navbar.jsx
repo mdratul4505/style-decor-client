@@ -38,7 +38,7 @@ const Navbar = () => {
        }
       </ul>
     </div>
-    <a className="btn font-bold btn-ghost text-2xl"> <logo className='bg-gradient-to-r from-pink-300 to-purple-300 p-2 rounded-2xl'><LuFlower2 /></logo> Style <span className='text-pink-300'>Decor</span></a>
+    <a className="btn font-bold btn-ghost text-2xl"> <span className='bg-gradient-to-r from-pink-300 to-purple-300 p-2 rounded-2xl'><LuFlower2 /></span> Style <span className='text-pink-300'>Decor</span></a>
 
   </div>
   <div className="navbar-center hidden lg:flex">

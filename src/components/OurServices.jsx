@@ -12,12 +12,12 @@ const OurServices = () => {
 }, []);
 
   return (
-    <div className="container mx-auto">
+    <div className="container my-20 mx-auto">
       <div 
      data-aos="fade-up"
      data-aos-duration="3000"
 
-      className="text-center my-20">
+      className="text-center ">
         <button className="text-pink-400 bg-pink-200 font-bold px-10 text-2xl rounded-3xl py-3">
           Our Services
         </button>
