@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { FaStar } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   useEffect(() => {
@@ -14,12 +15,25 @@ const Hero = () => {
         {/* LEFT SECTION */}
         <div data-aos="fade-right">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm mb-5">
+          <motion.div
+            initial={{ x: 0 }}
+            animate={{ y: [-10, 10, -10] }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0px 0px 25px rgba(252, 124, 171, 0.8)",
+            }}
+            className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm mb-5"
+          >
             <FaStar className="text-orange-500" />
             <p className="text-sm font-medium text-gray-600">
               Trusted by 10,000+ customers
             </p>
-          </div>
+          </motion.div>
 
           {/* Heading */}
           <h1 className="text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900">
@@ -68,21 +82,38 @@ const Hero = () => {
 
         {/* RIGHT IMAGE GRID */}
         <div className="relative w-full max-w-3xl mx-auto">
-          <div
-            data-aos="fade-left"
-            data-aos-duration="600"
+          <motion.div
+            initial={{ x: 0 }}
+            animate={{ y: [-10, 10, -10] }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0px 0px 25px rgba(252, 124, 171, 0.8)",
+            }}
             className="absolute -top-6 right-3 bg-white shadow-xl px-4 py-2 rounded-full flex items-center gap-2"
           >
             <span className="text-pink-500 text-xl">❤️</span>
             <p className="text-sm font-semibold">100% Satisfaction</p>
-          </div>
+          </motion.div>
 
           {/* Floating Badge — Bottom Left */}
-          <div
-            data-aos="fade-up"
-            data-aos-duration="700"
-            data-aos-delay="400"
-            className="absolute -bottom-5 left-5 z-20 bg-white shadow-xl px-4 py-2 rounded-full flex items-center gap-2"
+          <motion.div
+            initial={{ y: 0 }}
+            animate={{ y: [-10, 10, -10] }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0px 0px 25px rgba(252, 124, 171, 0.8)", // pink glow
+            }}
+            className="absolute -bottom-5 left-5 z-20 bg-white  shadow-xl px-4 py-2 rounded-full flex items-center gap-2"
           >
             <span className="text-teal-500 text-xl">⭐</span>
             <p className="text-sm font-semibold">
@@ -91,37 +122,60 @@ const Hero = () => {
                 2,500+ 5-star reviews
               </span>
             </p>
-          </div>
+          </motion.div>
 
           {/* Image Grid */}
           <div className="grid grid-cols-2 gap-5 mt-10">
             <div className="mt-10 space-y-5">
-              <img
+              <motion.img
                 data-aos="fade-right"
                 src="https://i.ibb.co.com/Ldg5t7Fh/2b14de10902cd3c557dbc9734481396b.jpg"
-                className="rounded-3xl h-68 w-full"
-
+                alt="Tumit Hasan"
+                className="rounded-3xl h-68 w-full shadow-lg "
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0px 0px 25px #fc7cab",
+                }}
+                transition={{ duration: 0.1 }}
               />
-
-              <img
+              =
+              <motion.img
                 data-aos="fade-up"
                 src="https://i.ibb.co.com/k2DntGzn/59096e0f4a73d0cc1152fbc61bbe1caf.jpg"
-                className="rounded-3xl h-68 w-full shadow-lg  "
+                alt="Tumit Hasan"
+                className="rounded-3xl h-68 w-full shadow-lg "
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0px 0px 25px #fc7cab",
+                }}
+                transition={{ duration: 0.1 }}
               />
             </div>
 
             <div className="space-y-5 mb-10">
-              <img
+              <motion.img
                 data-aos="fade-down"
                 data-aos-easing="linear"
                 src="https://i.ibb.co.com/9m71QVvF/48a0ad101060d06ee744d978da48948d.jpg"
-                className="rounded-3xl h-68 w-full shadow-lg  "
+                alt="Tumit Hasan"
+                className="rounded-3xl h-68 w-full shadow-lg "
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0px 0px 25px #fc7cab",
+                }}
+                transition={{ duration: 0.1 }}
               />
 
-              <img
+              <motion.img
                 data-aos="fade-left"
                 src="https://i.ibb.co.com/HDK5BYj2/7f7ca576752554d6dd2fd5de3e130d63.jpg"
-                className="rounded-3xl h-68 w-full shadow-lg  "
+                alt="Tumit Hasan"
+                className="rounded-3xl h-68 w-full shadow-lg "
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0px 0px 25px #fc7cab",
+                }}
+                transition={{ duration: 0.1 }}
               />
             </div>
           </div>
@@ -132,3 +186,23 @@ const Hero = () => {
 };
 
 export default Hero;
+
+{
+  /* <motion.div
+                initial={{ scale: 0.8 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.8 }}
+                className="flex justify-center lg:w-2/5"
+            >
+                <motion.img
+                    src={banner}
+                    alt="Tumit Hasan"
+                    className="rounded-full w-64 h-64 md:w-96 md:h-96 md:pt- object-cover border-4 border-lime-500 object-top"
+                    whileHover={{
+                        scale: 1.05,
+                        boxShadow: "0px 0px 25px #84cc16",
+                    }}
+                    transition={{ duration: 0.3 }}
+                />
+            </motion.div> */
+}
