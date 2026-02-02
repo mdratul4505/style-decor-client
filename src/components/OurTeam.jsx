@@ -60,7 +60,7 @@ const OurTeam = () => {
             />
           </span>{" "}
         </h2>
-      <p className="text-gray-500 mt-2 mb-10">
+      <p className="text-gray-500 font-semibold mt-2 mb-10">
         Experienced professionals ready to transform your vision into reality
       </p>
 
