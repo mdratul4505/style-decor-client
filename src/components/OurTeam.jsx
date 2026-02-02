@@ -89,7 +89,7 @@ const OurTeam = () => {
             </span>
 
             <h3 className="font-bold text-lg mt-4">{member.name}</h3>
-            <p className={`text-sm mt-1 ${member.color}`}>{member.role}</p>
+            <p className={`text-sm mt-1 px-2 rounded-xl ${member.color}`}>{member.role}</p>
             <p className="flex items-center text-gray-400 text-sm mt-1">
               <FaMapMarkerAlt className="mr-1" /> {member.location}
             </p>
