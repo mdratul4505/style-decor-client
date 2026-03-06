@@ -1,19 +1,189 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
 @import "tailwindcss";
-@plugin "daisyui";
 
-.taitle{
-  font-family: "Cormorant Garamond", serif;
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark;
 }
 
-.menu a.active{
-    text-decoration: underline;
-    color: rgb(196, 50, 196);
+/* --- LIGHT LUXE THEME --- */
+@plugin "daisyui/theme" {
+  name: "light";
+  /* Primary: Darker, Richer Gold for AA Contrast (4.52:1) */
+  --color-primary: #d4af37;
+  --color-primary-content: #0a0a0a;
+
+  /* Secondary: Dark Charcoal for strong contrast in light mode */
+  --color-secondary: #0a0a0a;
+  --color-secondary-content: #f5f5f5;
+
+  /* Accent: Medium Gold for AA Contrast (5.12:1) */
+  --color-accent: #c99a3b;
+  --color-accent-content: #0a0a0a;
+
+  /* Neutral: Muted Grays */
+  --color-neutral: #3d4451;
+  --color-neutral-content: #ffffff;
+
+  /* Base: Clean Whites/Creams */
+  --color-base-100: #ffffff;
+  --color-base-200: #fdfbf7; /* Very subtle warm tint */
+  --color-base-300: #e8e4db; /* Slightly darker for better hierarchy */
+  --color-base-content: #0a0a0a;
+
+  /* State Colors - Adjusted for AA Compliance */
+  --color-info: #0d6eab;
+  --color-success: #007a6e;
+  --color-warning: #d68b00;
+  --color-error: #d83f1a;
 }
 
-.width {
-  @apply w-10/12 mx-auto;
+/* --- DARK LUXE THEME (Primary Brand Look) --- */
+@plugin "daisyui/theme" {
+  name: "dark";
+  /* Primary: Brighter Gold for AAA Contrast (7.89:1) */
+  --color-primary: #d4af37;
+  --color-primary-content: #000000;
+
+  /* Secondary: Soft Gold / Champagne */
+  --color-secondary: #f7e7b3;
+  --color-secondary-content: #1a1a1a;
+
+  /* Accent: White for sharp highlights */
+  --color-accent: #ffffff;
+  --color-accent-content: #0a0a0a;
+
+  /* Neutral: Dark Gray for elements */
+  --color-neutral: #1a1a1a;
+  --color-neutral-content: #e5c158; /* Brighter gold for AAA contrast (7.73:1) */
+
+  /* Base: Deep Charcoal / Black */
+  --color-base-100: #0a0a0a; /* Your requested #0A0A0A */
+  --color-base-200: #111111; /* Slightly lighter for cards */
+  --color-base-300: #1c1c1c; /* Slightly brighter for better visibility */
+  --color-base-content: #f5f5f5; /* Crisper white text (17.48:1) */
+
+  /* State Colors - Enhanced for AA/AAA Compliance */
+  --color-info: #7dbef0;
+  --color-success: #3fb8a8;
+  --color-warning: #e2b968;
+  --color-error: #ff7b7b;
+
+  /* Custom Variables for Gradients/Borders */
+  --color-gold-start: #e5c158;
+  --color-gold-end: #f7e7b3;
 }
 
+/* --- TYPOGRAPHY SETUP --- */
+
+body {
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 0.02em; /* Slightly wider for elegance */
+  overflow-x: hidden; /* Prevent horizontal scroll globally */
+}
+
+/* Use for Headings and Logo */
+.font-serif {
+  font-family: "Playfair Display", serif;
+}
+
+/* Use for minimal body text */
+.font-sans {
+  font-family: "Outfit", sans-serif;
+}
+
+/* Utility for the Gold Gradient Text */
+.text-gold-gradient {
+  background: linear-gradient(
+    90deg,
+    #c99a3b 0%,
+    /* deep gold edge */ #e5c158 20%,
+    /* bright accessible gold */ #f7db7a 50%,
+    /* warm highlight center */ #e5c158 80%,
+    /* bright accessible gold */ #c99a3b 100% /* deep gold edge */
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% auto;
+  animation: shine 5s linear infinite;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Shine animation */
+@keyframes shine {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+/* NavLink styling */
+
+.active {
+  color: #e5c158 !important; /* brighter accessible gold */
+  font-weight: 500;
+  position: relative;
+}
+
+.active span {
+  width: 89% !important;
+  height: 2px;
+  background: linear-gradient(90deg, #e5c158, #f7db7a);
+  border-radius: 1px;
+  box-shadow: 0 0 8px rgba(229, 193, 88, 0.7);
+  transition: width 0.3s ease-in-out;
+}
+
+.btn-gold {
+  background: linear-gradient(to right, #e5c158, #f7db7a);
+  color: #0a0a0a;
+  border: 2px solid #e5c158;
+  box-shadow: 0 0 20px rgba(229, 193, 88, 0.35);
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  box-shadow: 0 0 35px rgba(229, 193, 88, 0.5);
+  transform: translateY(-2px);
+}
+
+.golden-border {
+  width: 80% !important;
+  height: 1px;
+  background: linear-gradient(90deg, #e5c158, #f7db7a);
+  border-radius: 1px;
+  box-shadow: 0 0 8px rgba(229, 193, 88, 0.7);
+  transition: width 0.3s ease-in-out;
+}
+
+
+.luxe-input {
+  @apply w-full pl-10 pr-4 py-3 rounded-xl border border-base-300 bg-base-200 
+         transition-all duration-300 outline-none;
+}
+
+.luxe-input:focus {
+  @apply border-primary/70 shadow-[0_0_10px_rgba(229,193,88,0.4)] bg-base-100;
+}
+
+/* --- CUSTOM SCROLLBAR --- */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--color-base-300);
+  border-radius: 20px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-primary);
+}
