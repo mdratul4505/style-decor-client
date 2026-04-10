@@ -111,7 +111,8 @@ const MyBookings = () => {
       }
     } catch (err) {
       console.error(err);
-      toast.error("Payment failed!");
+      const errorMessage = err.response?.data?.detail || err.response?.data?.error || "Payment failed!";
+      toast.error(errorMessage);
     }
   };
 

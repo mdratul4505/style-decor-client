@@ -1,5 +1,6 @@
 import React from "react";
 import { FiX } from "react-icons/fi";
+import toast from "react-hot-toast";
 
 const AssignDecoratorModal = ({
   isOpen,
@@ -10,6 +11,7 @@ const AssignDecoratorModal = ({
   onClose,
   onAssign,
   loading,
+  onAutoRecommend,
 }) => {
   if (!isOpen) return null;
 
@@ -37,21 +39,12 @@ const AssignDecoratorModal = ({
                 onClick={async () => {
                     const toastId = toast.loading("Finding best matches...");
                     try {
-                         // Import axios if not available in props, but assuming we can pass handleRecommend or use useAxiosSecure inside component? 
-                         // Component doesn't have useAxiosSecure hook call inside. 
-                         // I should probably pass a function or add the logic here.
-                         // Let's assume we need to fetch it.
-                         // Since I cannot add imports easily at top without full replace, I'll assume props or use global axios if possible? 
-                         // Actually, this component is a presentational modal. 
-                         // Better to move the logic to ManageBookings.jsx and pass `onRecommend`.
-                         // But for now, I'll add a simple button that emits an event "onAutoRecommend".
-                         // Wait, I can't emit event easily without changing parent.
-                         // Let's try to add the logic here if I can use fetch or axios.
-                         // Or better: Update ManageBookings to pass `recommendations` or `handleRecommend`.
-                         // I will make this button trigger `onAutoRecommend` prop.
-                         onAutoRecommend && onAutoRecommend();
-                         toast.dismiss(toastId);
-                    } catch(e) { toast.error("Failed"); toast.dismiss(toastId); }
+                        await onAutoRecommend();
+                        toast.dismiss(toastId);
+                    } catch(e) { 
+                        toast.error("Failed to get recommendations"); 
+                        toast.dismiss(toastId); 
+                    }
                 }}
             >
                 ✨ Auto Recommend
@@ -76,7 +69,7 @@ const AssignDecoratorModal = ({
                             }}
                         />
                         <div>
-                           <div className="font-bold text-white/90">{d.fullName}</div>
+                           <div className="font-bold text-white/90">{d.fullName || d.name}</div>
                            <div className="text-xs text-white/50">{d.email}</div>
                            <div className="text-xs text-primary">{d.specialty}</div>
                         </div>

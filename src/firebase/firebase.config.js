@@ -1,8 +1,6 @@
-// Import the functions you need from the SDKs
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 
-// Firebase configuration using env
+// Firebase configuration using env variables
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
@@ -15,12 +13,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-// ✅ Analytics safe way
-let analytics;
-if (typeof window !== "undefined") {
-  analytics = getAnalytics(app);
-}
 
 export default app;
 

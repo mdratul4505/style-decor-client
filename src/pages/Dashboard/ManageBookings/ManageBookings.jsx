@@ -69,7 +69,7 @@ const ManageBookings = () => {
       await axiosSecure.patch(`/bookings/${selectedBooking._id}/assign`, {
         decoratorEmails: selectedDecorator.map(d => d.email),
         decoratorIds: selectedDecorator.map(d => d._id),
-        decoratorNames: selectedDecorator.map(d => d.fullName),
+        decoratorNames: selectedDecorator.map(d => d.fullName || d.name),
       });
 
       toast.success("Decorator assigned successfully!");

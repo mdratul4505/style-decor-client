@@ -21,7 +21,7 @@ const Footer = () => {
     {
       id: "facebook",
       Icon: FiFacebook,
-      href: "https://www.facebook.com/mehedihasanrafi205",
+      href: "https://www.facebook.com/cadet.ratul.2024",
       label: "Facebook",
     },
     {
@@ -33,7 +33,7 @@ const Footer = () => {
     {
       id: "linkedin",
       Icon: FiLinkedin,
-      href: "https://linkedin.com/in/mehedihasanrafi205",
+      href: "https://www.linkedin.com/in/mdratul-hasan/",
       label: "LinkedIn",
     },
     {
@@ -185,9 +185,9 @@ const Footer = () => {
             </h3>
             <ul className="space-y-4">
               <li>
-                <a href="mailto:mehedihasanrafi205@gmail.com" className="flex items-start gap-3 text-gray-400 hover:text-yellow-400 transition-colors group">
+                <a href="mailto:dev.ratul.coder@gmail.com" className="flex items-start gap-3 text-gray-400 hover:text-yellow-400 transition-colors group">
                   <FiMail size={18} className="mt-1" />
-                  <span className="group-hover:translate-x-1 transition-transform">mehedihasanrafi205@gmail.com</span>
+                  <span className="group-hover:translate-x-1 transition-transform">dev.ratul.coder@gmail.com</span>
                 </a>
               </li>
               <li>
@@ -198,7 +198,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3 text-gray-400">
                 <FiMapPin size={18} className="mt-1" />
-                <span>Gulshan, Dhaka, Bangladesh</span>
+                <span>satkhira , Bangladesh</span>
               </li>
               <li className="flex items-start gap-3 text-gray-400">
                 <FiClock size={18} className="mt-1" />
