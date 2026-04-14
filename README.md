@@ -147,10 +147,26 @@ This system solves real-life problems of local decoration businesses such as:
 ---
 
 
-##👨‍💼 Admin Account
-Email: admin@gmail.com
-Password: 123456@aA
+## 👨‍💼 Admin Account
+- Email: admin@gmail.com
+- Password: 123456@aA
 
+--- 
+
+## ✨ Highlights
+- Role-based dashboards
+- Stripe payment integration
+- Analytics & charts
+- Clean architecture
+- Modern UI with animations
+- Production-ready MERN setup
+---
+## 👨‍💻 Author
+- Md: Ratul Hasan
+
+- GitHub:https://github.com/mdratul4505
+- Email: dev.ratul.coder@gmail.com
+---
 ## 🌱 Environment Variables
 
 Create `.env` file:
@@ -164,20 +180,5 @@ VITE_MESSAGINGSENDERID=your_sender_id
 VITE_APPID=your_app_id
 VITE_API_URL=http://localhost:5000
 VITE_STRIPE_PUBLIC_KEY=your_stripe_key
-
-## ✨ Highlights
-- Role-based dashboards
-- Stripe payment integration
-- Analytics & charts
-- Clean architecture
-- Modern UI with animations
-- Production-ready MERN setup
----
-##👨‍💻 Author
-- Md: Ratul Hasan
-
-- GitHub:https://github.com/mdratul4505
-- Email: dev.ratul.coder@gmail.com
----
 
 ### Made with 💛 using MERN Stack
