@@ -1,8 +1,8 @@
 # 💎 StyleDecor - Smart Home & Ceremony Decoration Booking System
 
-🔗 **Live Site:** https://style-decor-client-sepia.vercel.app/ 
-💻 **Client Repo:** https://github.com/mdratul4505/style-decor-client.git
-🛠 **Server Repo:** https://github.com/mdratul4505/style-decor-server.git  
+- 🔗 **Live Site:** https://style-decor-client-sepia.vercel.app/ 
+- 💻 **Client Repo:** https://github.com/mdratul4505/style-decor-client.git
+- 🛠 **Server Repo:** https://github.com/mdratul4505/style-decor-server.git  
 
 ---
 
@@ -172,11 +172,12 @@ VITE_STRIPE_PUBLIC_KEY=your_stripe_key
 - Clean architecture
 - Modern UI with animations
 - Production-ready MERN setup
-
+---
 ##👨‍💻 Author
-Md: Ratul Hasan
+- Md: Ratul Hasan
 
-GitHub:https://github.com/mdratul4505
-Email: dev.ratul.coder@gmail.com
+- GitHub:https://github.com/mdratul4505
+- Email: dev.ratul.coder@gmail.com
+---
 
 ### Made with 💛 using MERN Stack
